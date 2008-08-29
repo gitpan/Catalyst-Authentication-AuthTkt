@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                Catalyst-Authentication-AuthTkt
-version:             0.04
+version:             0.05
 abstract:            shim for Apache::AuthTkt
 license:             ~
 author:              
