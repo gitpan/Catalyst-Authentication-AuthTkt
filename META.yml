@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                Catalyst-Authentication-AuthTkt
-version:             0.03
+version:             0.04
 abstract:            shim for Apache::AuthTkt
 license:             ~
 author:              
@@ -11,6 +11,7 @@ requires:
     Apache::AuthTkt:               0.08
     Catalyst:                      5.7014
     Catalyst::Plugin::Authentication: 0.10007
+    Catalyst::Plugin::Static::Simple: 0
     Config::General:               0
     Data::Dump:                    0
     Test::More:                    0
