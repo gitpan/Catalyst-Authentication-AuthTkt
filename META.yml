@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Catalyst-Authentication-AuthTkt
-version:            0.09
+version:            0.10
 abstract:           shim for Apache::AuthTkt
 author:
     - Peter Karman <karman at cpan dot org>
@@ -15,9 +15,13 @@ requires:
     Catalyst:             5.7014
     Catalyst::Plugin::Authentication:  0.10007
     Catalyst::Plugin::ConfigLoader:  0
+    Catalyst::Plugin::Session:  0
+    Catalyst::Plugin::Session::State::Cookie:  0
+    Catalyst::Plugin::Session::Store::Dummy:  0
     Catalyst::Plugin::Static::Simple:  0
     Config::General:      0
     Data::Dump:           0
+    HTTP::Request::AsCGI:  0
     Test::More:           0
 no_index:
     directory:
