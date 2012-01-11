@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Catalyst-Authentication-AuthTkt
-version:            0.11_01
+version:            0.12
 abstract:           shim for Apache::AuthTkt
 author:
     - Peter Karman <karman at cpan dot org>
@@ -21,13 +21,13 @@ requires:
     Catalyst::Plugin::Static::Simple:  0
     Config::General:      0
     Data::Dump:           0
-    HTTP::Request::AsCGI:  0
+    Moose:                0
     Test::More:           0
 no_index:
     directory:
         - t
         - inc
-generated_by:       ExtUtils::MakeMaker version 6.56
+generated_by:       ExtUtils::MakeMaker version 6.54
 meta-spec:
     url:      http://module-build.sourceforge.net/META-spec-v1.4.html
     version:  1.4
