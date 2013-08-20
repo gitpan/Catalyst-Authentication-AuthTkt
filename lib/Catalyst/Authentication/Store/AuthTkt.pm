@@ -10,7 +10,7 @@ use Catalyst::Authentication::User::AuthTkt;
 
 __PACKAGE__->mk_accessors(qw( cookie_name aat config debug ));
 
-our $VERSION = '0.13';
+our $VERSION = '0.14';
 
 =head1 NAME
 
@@ -37,7 +37,7 @@ sub new {
     my $self = $class->SUPER::new(
         { cookie_name => $config->{cookie_name} || 'auth_tkt' } );
     my @aat_args = ();
-    for my $param (qw( cookie_name domain timeout timeout_refresh )) {
+    for my $param (qw( ignore_ip cookie_name domain timeout timeout_refresh )) {
         if ( exists $config->{$param} ) {
             push( @aat_args, $param => $config->{$param} );
         }
