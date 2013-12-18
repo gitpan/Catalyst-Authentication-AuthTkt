@@ -1,10 +1,10 @@
 package Catalyst::Authentication::Credential::AuthTkt;
+use Moose;
+use namespace::autoclean;
 
-use warnings;
-use strict;
-use base qw( Class::Accessor::Fast );
+has 'config' => ( is => 'ro', isa => 'HashRef' );
 
-our $VERSION = '0.14';
+our $VERSION = '0.15';
 
 =head1 NAME
 
@@ -16,6 +16,18 @@ This module implements the Catalyst::Plugin::Authentication API for Apache::Auth
 See Catalyst::Authentication::AuthTkt for complete user documentation.
 
 =head1 METHODS
+
+=head2 new( I<config>, I<app>, I<realm> )
+
+Constructor.
+
+=cut
+
+sub new {
+    my $class = shift;
+    my ( $config, $app, $realm ) = @_;
+    return bless { config => $config, }, $class;
+}
 
 =head2 authenticate( I<context>, I<authstore>, I<authinfo> )
 
